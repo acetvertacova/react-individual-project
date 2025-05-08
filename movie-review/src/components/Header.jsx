@@ -10,9 +10,7 @@ export default function Header() {
         <header className="bg-[#064E2D] text-white p-4 shadow-lg">
             <nav className="flex justify-between items-center max-w-6xl mx-auto">
                 <h1 className="text-3xl font-semibold">
-                    <Link to="/" className="hover:text-[#A9CDE5] transition duration-300">
-                        Movie Reviews
-                    </Link>
+                    Movie Reviews
                 </h1>
                 <div className="space-x-6">
                     <Link to="/" className="hover:text-[#A9CDE5] transition duration-300">

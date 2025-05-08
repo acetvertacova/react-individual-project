@@ -112,7 +112,6 @@ export default function ReviewForm() {
                                     autoClose: 2000,
                                 });
                                 reset();
-                                navigate('/');
                             } catch (err) {
                                 console.error('An error occurred:', err);
                                 toast.error(err.message || 'Failed to create review. Please try again.');

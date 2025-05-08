@@ -13,7 +13,6 @@ export default function ReviewCard({ movie, onDelete }) {
 
     return (
         <div className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden w-80 h-auto transition-transform duration-300 hover:scale-105 border border-gray-200">
-            {/* Poster Image */}
             <div className="relative">
                 <img
                     src={movie.posterUrl}
@@ -23,7 +22,6 @@ export default function ReviewCard({ movie, onDelete }) {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#064E2D]/90 to-transparent h-16"></div>
             </div>
 
-            {/* Title */}
             <div className="p-4 bg-white">
                 <h2 className="text-2xl font-bold text-[#064E2D] hover:text-[#A9CDE5] transition-colors mb-2">
                     {movie.title} ({movie.year})
@@ -32,13 +30,10 @@ export default function ReviewCard({ movie, onDelete }) {
                     <strong className="text-[#064E2D]">Genre:</strong> {movie.genre.join(", ")}
                 </div>
 
-                {/* Review Title */}
                 <p className="text-sm text-gray-600 mt-2 line-clamp-2">{movie.reviewTitle}</p>
 
-                {/* Rating */}
                 <p className="text-sm text-[#064E2D] font-medium mt-2">⭐ {movie.rating}/10</p>
 
-                {/* Actors */}
                 <div className="mt-2">
                     <strong className="text-[#064E2D]">Actors:</strong>
                     <ul className="list-disc ml-5 text-gray-700">
@@ -49,7 +44,6 @@ export default function ReviewCard({ movie, onDelete }) {
                 </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="grid grid-cols-2 gap-2 p-3 bg-gray-50 border-t border-gray-100">
                 <button
                     onClick={() => navigate(`/reviews/${movie.id}`)}
@@ -63,7 +57,6 @@ export default function ReviewCard({ movie, onDelete }) {
                     className="px-3 py-2 bg-white text-indigo-600 border border-indigo-300 text-sm rounded-lg hover:bg-indigo-50 transition duration-300 flex items-center justify-center gap-1 font-medium shadow-sm"
                 >
                     <HeartIcon className="w-4 h-4 text-pink-500" />
-                    Favorite
                 </button>
 
                 <button

@@ -22,7 +22,7 @@ export default function Home() {
         const lowerQuery = query.toLowerCase();
 
         const filtered = movies.filter((movie) => {
-            const field = (movie[filterBy] || "").toString().toLowerCase();
+            const field = (movie[filterBy]).toString().toLowerCase();
             return field.includes(lowerQuery);
         });
 
