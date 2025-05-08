@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import schema from "../validation/review.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as movieApi from '../api/movie/movie';
@@ -33,8 +33,6 @@ function UndoNotification({ closeToast }) {
 
 export default function ReviewForm() {
     const { id } = useParams();
-    const navigate = useNavigate();
-    const [error, setError] = useState(null);
     const toastId = useRef(null);
 
     const {
@@ -64,7 +62,6 @@ export default function ReviewForm() {
     });
 
     useEffect(() => {
-        setError(null);
         if (id) {
             const fetchReviewData = async () => {
                 const data = await movieApi.getMovieById(id);
@@ -123,7 +120,6 @@ export default function ReviewForm() {
             }
         } catch (err) {
             console.error('An error occurred:', err);
-            setError(err.message || 'Please try again later.');
             toast.error(err.message || 'An error occurred. Please try again.');
         }
     };

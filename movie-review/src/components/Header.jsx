@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectFavorites } from "../store/reviews/actions";
+import { selectFavorites } from "../store/favorites/actions";
 
 export default function Header() {
     const reviews = useSelector(selectFavorites);

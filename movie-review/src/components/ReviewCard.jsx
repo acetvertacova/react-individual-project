@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { addToFavorites } from "../store/reviews/slice";
+import { addToFavorites } from "../store/favorites/slice";
 import { useDispatch } from "react-redux";
 import { HeartIcon } from '@heroicons/react/24/solid';
 

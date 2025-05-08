@@ -11,8 +11,9 @@ export default function Home() {
     const handleDelete = async (id) => {
         try {
             await movieApi.deleteMovie(id);
-            setMovies(movies.filter(item => item.id !== id));
-            setFilteredMovies(movies.filter(item => item.id !== id));
+            const updatedList = movies.filter(item => item.id !== id);
+            setMovies(updatedList);
+            setFilteredMovies(updatedList);
         } catch (error) {
             console.error("On delete error", error);
         }

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites } from "../store/reviews/actions";
+import { selectFavorites } from "../store/favorites/actions";
 import { useNavigate } from "react-router-dom";
-import { clearFavorites, removeFavorite } from "../store/reviews/slice";
+import { clearFavorites, removeFavorite } from "../store/favorites/slice";
 
 export default function Favorites() {
     const reviews = useSelector(selectFavorites);

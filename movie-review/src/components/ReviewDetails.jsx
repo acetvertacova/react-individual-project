@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 export default function ReviewDetails() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [movie, setMovie] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -15,6 +16,7 @@ export default function ReviewDetails() {
                 const data = await movieApi.getMovieById(id);
                 setMovie(data);
             } catch (err) {
+                setNotFound(true);
                 console.error('An error loading:', err);
                 setError('Failed to load review. Please try again later.');
             } finally {
@@ -30,7 +32,7 @@ export default function ReviewDetails() {
     }
 
     if (notFound) {
-        return <p className="text-center text-lg text-red-600">404 - Movie not found</p>;
+        return navigate("*");
     }
 
     if (error) {
