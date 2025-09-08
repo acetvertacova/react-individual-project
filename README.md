@@ -38,41 +38,41 @@
 
 ## The Project's Structure
 
- src/
-        │── layouts/
-        │   └── MainLayout.jsx       # Main layout component (includes Header, Footer, Outlet.)
-        |
-        │── components/
-        │   │── Footer.jsx
-        │   │── Header.jsx
-        │   │── ReviewCard.jsx       # Card view for individual reviews
-        │   │── ReviewForm.jsx       # Form for creating and updating reviews
-        │   │── Search.jsx           # Search bar component
-        │   └── ReviewDetails.jsx    # Detailed view of a selected review
-        |
-        │── store/                   # Redux Toolkit store and feature slices
-        │   │── favorites/                
-        |   |   │── actions.js       
-        │   |   └── slice.js         # Redux slice for managing favorites 
-        │   └── store.js   
-        |
-        │── api/                   
-        │   │── movie/                    
-        │   |   └── movie.js         # Movie-specific API functions      
-        │   └── api.js             
-        |
-        │── pages/                   # Route-based pages
-        │   │── Home.jsx    
-        |   │── Favorites.jsx
-        |   └── NotFoundPage.jsx
-        |
-        │── validation/
-        |   └── review.schema.js     # Validation schema for the review form (e.g., using Yup)
-        |
-        │── App.jsx                  # App entry point
-        │── main.jsx
-        │── App.css
-        |── ...
+     src/
+            │── layouts/
+            │   └── MainLayout.jsx       # Main layout component (includes Header, Footer, Outlet.)
+            |
+            │── components/
+            │   │── Footer.jsx
+            │   │── Header.jsx
+            │   │── ReviewCard.jsx       # Card view for individual reviews
+            │   │── ReviewForm.jsx       # Form for creating and updating reviews
+            │   │── Search.jsx           # Search bar component
+            │   └── ReviewDetails.jsx    # Detailed view of a selected review
+            |
+            │── store/                   # Redux Toolkit store and feature slices
+            │   │── favorites/                
+            |   |   │── actions.js       
+            │   |   └── slice.js         # Redux slice for managing favorites 
+            │   └── store.js   
+            |
+            │── api/                   
+            │   │── movie/                    
+            │   |   └── movie.js         # Movie-specific API functions      
+            │   └── api.js             
+            |
+            │── pages/                   # Route-based pages
+            │   │── Home.jsx    
+            |   │── Favorites.jsx
+            |   └── NotFoundPage.jsx
+            |
+            │── validation/
+            |   └── review.schema.js     # Validation schema for the review form (e.g., using Yup)
+            |
+            │── App.jsx                  # App entry point
+            │── main.jsx
+            │── App.css
+            |── ...
 
 ## Usage example
 
